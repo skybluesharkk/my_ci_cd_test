@@ -57,7 +57,7 @@ jobs:
           aws-region: ap-northeast-2
 
       - name: 압축(zip)한 리소스 => s3 업로드
-        run:  aws s3 cp --region ap-northeast-2 ./app.zip s3://pusan00-deploy-bucket/deploy/
+        run:  aws s3 cp --region ap-northeast-2 ./app.zip s3://pusan-deploy-bucket/deploy/
 
       - name: AWS codeDeploy 서비스에 절차에 따라 배포 시작
         run:  aws deploy create-deployment 
